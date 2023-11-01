@@ -222,14 +222,14 @@ h2 {
 .ingreso-tarjeta h1 {
     display: inline-block;
     margin-right: 16px;
-    font-size: 45px; 
+    font-size: 25px; 
 }
 
 .ingreso-tarjeta input {
     display: inline-block;
     width: 350px;
     height: 40px;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .button-canjear {
