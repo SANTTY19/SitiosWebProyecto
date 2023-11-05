@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncios del Anfitrión</title>
+    <link rel="stylesheet" href="estilosvalidarperfil.css">
+    <link rel="stylesheet" href="estilosPaginaSL.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="menu-button" id="menuButton">
+            <img src="img/menuDespegable.png" alt="Menú">
+        </button>
+        <div class="menu-modal" id="menuModal">
+            <div class="user-info">
+                <img src="img/usuario.png" alt="Foto de perfil">
+                <h2>Nombre Apellido</h2>
+            </div>
+            <div class="menu-links">
+                <a href="Favoritos.html">
+                    <img src="img/favoritoR.png" alt="Favoritos" style="width: 10%; height: 10%; object-fit: contain;">
+                    Favoritos
+                </a>
+                <a href="Mensajeria.html">
+                    <img src="img/mensajeria-instantanea.png" alt="Favoritos"
+                        style="width: 10%; height: 10%; object-fit: contain;">
+                    Mensajeria
+                </a>
+            </div>
+        </div>
+        <img src="img/logo.PNG" alt="logo" style="width: 250px; display: block; margin: 0 auto;">
+        <div class="topnav">
+            <div class="buscar">
+                <input type="text" placeholder="En cualquier lugar | Cualquier Semana | ¿Cuantos?" required>
+                <div class="btn">
+                    <i class="fas fa-search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Subir tu documento de identficacion</h1>
+        <form id="imageForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image1">Seleccionar imagen 1:</label>
+                <input type="file" id="image1" name="image1" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="image2">Seleccionar imagen 2:</label>
+                <input type="file" id="image2" name="image2" accept="image/*" required>
+            </div>
+            <button type="submit">Subir Imágenes</button>
+        </form>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

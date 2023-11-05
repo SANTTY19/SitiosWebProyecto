@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlojaTuMundo</title>
+    <link rel="stylesheet" href="estiloscalificacionh.css" />
+    <link rel="stylesheet" href="estilosPaginaSL.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="menu-button" id="menuButton">
+            <img src="img/menuDespegable.png" alt="Menú">
+        </button>
+        <div class="menu-modal" id="menuModal">
+            <div class="user-info">
+                <img src="img/usuario.png" alt="Foto de perfil">
+                <h2>Nombre Apellido</h2>
+            </div>
+            <div class="menu-links">
+                <a href="Favoritos.html">
+                    <img src="img/favoritoR.png" alt="Favoritos" style="width: 10%; height: 10%; object-fit: contain;">
+                    Favoritos
+                </a>
+                <a href="Mensajeria.html">
+                    <img src="img/mensajeria-instantanea.png" alt="Favoritos"
+                        style="width: 10%; height: 10%; object-fit: contain;">
+                    Mensajeria
+                </a>
+            </div>
+        </div>
+        <img src="img/logo.PNG" alt="logo" style="width: 250px; display: block; margin: 0 auto;">
+        <div class="topnav">
+            <div class="buscar">
+                <input type="text" placeholder="En cualquier lugar | Cualquier Semana | ¿Cuantos?" required>
+                <div class="btn">
+                    <i class="fas fa-search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body2">
+        <div class="container">
+            <h1>Calificar Huéspedes</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nombreHuesped">Nombre del Huésped:</label>
+                    <input type="text" id="nombreHuesped" name="nombreHuesped" required>
+                </div>
+                <div class="form-group">
+                    <label for="habitacion">Número de Habitación:</label>
+                    <input type="text" id="habitacion" name="habitacion" required>
+                </div>
+                <div class="form-group">
+                    <label for="calificacion">Calificación del Huésped:</label>
+                    <select id="calificacion" name="calificacion">
+                        <option value="habitacion-en-condiciones">Si dejó la habitación en las condiciones que se
+                            entregó.</option>
+                        <option value="habitacion-no-en-condiciones">No dejó la habitación en las condiciones que se
+                            entregó.</option>
+                        <option value="equipamiento-completo">Equipamiento de la habitación está completo.</option>
+                        <option value="equipamiento-incompleto">Equipamiento de la habitación está incompleto.</option>
+                        <option value="cumplio-horas-de-silencio">Cumplió con las horas de silencio y cierre.</option>
+                        <option value="no-cumplio-horas-de-silencio">No cumplió con las horas de silencio y cierre.
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entrada">Fecha de Entrada:</label>
+                    <input type="date" id="entrada" name="entrada" required>
+                </div>
+                <div class="form-group">
+                    <label for="salida">Fecha de Salida:</label>
+                    <input type="date" id="salida" name="salida" required>
+                </div>
+                <div class="form-group">
+                    <label for="detalles">Detalles de la Reserva:</label>
+                    <textarea id="detalles" name="detalles" rows="4"></textarea>
+                </div>
+                <button type="submit">Calificar Huésped</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuModal = document.getElementById("menuModal");
+
+        menuButton.addEventListener("click", function (event) {
+            menuModal.classList.toggle("show");
+            event.stopPropagation();
+        });
+
+        menuModal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", function () {
+            menuModal.classList.remove("show");
+        }); 
+    </script>
+</body>
+
+</html>

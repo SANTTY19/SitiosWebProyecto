@@ -1,0 +1,149 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* La mitad de la altura de la ventana */
+    background-color: #f2f2f2; /* Color de fondo para la galería */
+}
+
+.photo-gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: 10px; /* Espacio entre las imágenes */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 20px;
+    max-width: 1000px; /* Ancho máximo para el contenido principal */
+    margin: 0 auto; /* Centra el contenido en la página */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+}
+
+.location-info {
+    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 400px; /* Establece un ancho máximo para el texto */
+}
+
+.location-info p {
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-container {
+    width: 50%; /* El texto ocupará el 50% del espacio disponible */
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Borde sombreado */
+    text-align: right;
+    width: 300px; /* Ancho fijo para la tarjeta */
+}
+
+.card label,
+.card input,
+.card button {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 500px; /* Ajusta el ancho del modal según tus necesidades */
+    height: 400px; /* Ajusta la altura del modal según tus necesidades */
+    background-color: rgb(87, 145, 184);
+    border: 1px solid #888;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px; /* Espacio entre el checkbox y el texto */
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

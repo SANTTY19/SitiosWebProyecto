@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlojaTuMundo</title>
+    <link rel="stylesheet" href="estilosPaginaSL.css" />
+    <link rel="stylesheet" href="estilosdetallesreserva.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="menu-button" id="menuButton">
+            <img src="img/menuDespegable.png" alt="Menú">
+        </button>
+        <div class="menu-modal" id="menuModal">
+            <div class="user-info">
+                <img src="img/usuario.png" alt="Foto de perfil">
+                <h2>Nombre Apellido</h2>
+            </div>
+            <div class="menu-links">
+                <a href="Favoritos.html">
+                    <img src="img/favoritoR.png" alt="Favoritos" style="width: 10%; height: 10%; object-fit: contain;">
+                    Favoritos
+                </a>
+                <a href="Mensajeria.html">
+                    <img src="img/mensajeria-instantanea.png" alt="Favoritos"
+                        style="width: 10%; height: 10%; object-fit: contain;">
+                    Mensajeria
+                </a>
+            </div>
+        </div>
+        <img src="img/logo.PNG" alt="logo" style="width: 250px; display: block; margin: 0 auto;">
+        <div class="topnav">
+            <div class="buscar">
+                <input type="text" placeholder="En cualquier lugar | Cualquier Semana | ¿Cuantos?" required>
+                <div class="btn">
+                    <i class="fas fa-search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="photo-gallery">
+        <img src="img/PaisajePrueba.jpg" alt="PaisajePrueba1">
+        <img src="img/PaisajePrueba2.webp" alt="PaisajePrueba2">
+        <img src="img/PaisajePrueba3.webp" alt="PaisajePrueba3">
+    </div>
+
+    <div class="main-content">
+        <div class="location-info">
+            <label for="informacion">Nombre del Lugar</label>
+            <label for="detalles">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de
+                texto.
+                Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
+                impresor
+                (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de
+                tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que
+                tambien
+                ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
+                Fue
+                popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de
+                Lorem
+                Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual
+                incluye versiones de Lorem Ipsum.</label>
+        </div>
+        <div class="card">
+            <!-- Contenido de los detalles de reserva (fecha entrada, fecha salida, precio total) -->
+            <label for="fecha-entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha-entrada" name="fecha-entrada">
+
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="fecha-salida">
+
+            <button class="reservar-button">Reservar</button>
+        </div>
+    </div>
+
+    <button id="denunciarBtn">Denunciar este anuncio</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2>Denuncia este anuncio</h2>
+            <p>Por favor, indique la razón de su denuncia:</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="opcion[]" value="incorrecto"> Es incorrecto o poco preciso</label>
+                <label><input type="checkbox" name="opcion[]" value="no-real"> No es un alojamiento real</label>
+                <label><input type="checkbox" name="opcion[]" value="estafa"> Es una estafa</label>
+                <label><input type="checkbox" name="opcion[]" value="otra"> Otra cosa</label>
+            </div>
+            <button id="enviarDenunciaBtn">Enviar Denuncia</button>
+        </div>
+    </div>
+    <script>
+        // Obtén el botón y el modal por sus IDs
+        var denunciarBtn = document.getElementById("denunciarBtn");
+        var modal = document.getElementById("modal");
+        var closeBtn = document.getElementById("closeBtn");
+
+        // Mostrar el modal cuando se haga clic en el botón
+        denunciarBtn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Ocultar el modal cuando se haga clic en el botón de cerrar (×)
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Ocultar el modal cuando se haga clic fuera de él
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

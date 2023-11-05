@@ -1,0 +1,47 @@
+.imagen-grande {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.imagen-pequena {
+    width: 430px; /* Ancho deseado para las imágenes pequeñas */
+    height: 95%; /* Establece la altura al 100% para mantener la proporción */
+    object-fit: cover;
+}
+
+.favorito-card {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: row; /* Cambiado de columna a fila */
+    align-items: center; /* Centra las imágenes verticalmente */
+    width: 50%;
+}
+
+.imagenes-pequenas {
+    display: flex;
+    flex-direction: column; /* Apiladas verticalmente */
+    margin-left: 20px;
+}
+
+.informacion {
+    flex: 1;
+    padding: 10px;
+}
+
+.modal-button {
+    background-color: #5791b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}

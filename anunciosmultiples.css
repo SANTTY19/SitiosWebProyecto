@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabla {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #4c82a7;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 6px 0px #6fb1dc);
+    width: 80%; /* Ajusta el ancho de la tabla según tus necesidades */
+    margin: 0 auto; /* Centra la tabla en la página */
+}
+
+.tabla table {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla table tr th {
+    font-size: 1em;
+    font-weight: 300;
+    border: solid 1px #ededed;
+    padding: 3px 0px 3px 0px;
+    font-family: 'Muli', sans-serif;
+    background-color: #fff;
+}
+/*
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+*/
+/* Estilos para el botón de editar */
+table img {
+    cursor: pointer;
+}
+
+.small-img {
+    width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.edit-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #ffffff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se muevan a la siguiente línea si no hay suficiente espacio */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #63a1ca;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espacio entre las cards */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    margin-bottom: 15px;
+}
+
+.textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.save-button {
+    background-color: #fcc728;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-button:hover {
+    background-color: #e2b324;
+}

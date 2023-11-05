@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlojaTuMundo</title>
+    <link rel="stylesheet" href="estilosPaginaSL.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="menu-button" id="menuButton">
+            <img src="img/menuDespegable.png" alt="Menú">
+        </button>
+        <div class="menu-modal" id="menuModal">
+            <div class="user-info">
+                <img src="img/usuario.png" alt="Foto de perfil">
+                <h2>Nombre Apellido</h2>
+            </div>
+            <div class="menu-links">
+                <a href="Favoritos.html">
+                    <img src="img/favoritoR.png" alt="Favoritos" style="width: 10%; height: 10%; object-fit: contain;">
+                    Favoritos
+                </a>
+                <a href="Mensajeria.html">
+                    <img src="img/mensajeria-instantanea.png" alt="Favoritos"
+                        style="width: 10%; height: 10%; object-fit: contain;">
+                    Mensajeria
+                </a>
+            </div>
+        </div>
+        <img src="img/logo.PNG" alt="logo" style="width: 250px; display: block; margin: 0 auto;">
+        <div class="topnav">
+            <div class="buscar">
+                <input type="text" placeholder="En cualquier lugar | Cualquier Semana | ¿Cuantos?" required>
+                <div class="btn">
+                    <i class="fas fa-search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-navbar">
+        <div class="filter-button-container">
+            <button class="filter-button" id="filtroButton">Filtros</button>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-option"><img src="filtros/Icon.png" alt="Filtro 1"></button>
+            <button class="filter-option"><img src="filtros/Icon1.png" alt="Filtro 2"></button>
+            <button class="filter-option"><img src="filtros/Icon2.png" alt="Filtro 3"></button>
+            <button class="filter-option"><img src="filtros/Icon3.png" alt="Filtro 4"></button>
+            <button class="filter-option"><img src="filtros/Icon4.png" alt="Filtro 5"></button>
+            <button class="filter-option"><img src="filtros/Icon5.png" alt="Filtro 6"></button>
+            <button class="filter-option"><img src="filtros/Icon6.png" alt="Filtro 7"></button>
+            <button class="filter-option"><img src="filtros/Icon7.png" alt="Filtro 8"></button>
+            <button class="filter-option"><img src="filtros/Icon8.png" alt="Filtro 9"></button>
+            <button class="filter-option"><img src="filtros/Icon9.png" alt="Filtro 10"></button>
+            <button class="filter-option"><img src="filtros/Icon10.png" alt="Filtro 11"></button>
+            <button class="filter-option"><img src="filtros/Icon11.png" alt="Filtro 12"></button>
+            <button class="filter-option"><img src="filtros/Icon12.png" alt="Filtro 13"></button>
+            <button class="filter-option"><img src="filtros/Icon13.png" alt="Filtro 14"></button>
+            <button class="filter-option"><img src="filtros/Icon14.png" alt="Filtro 15"></button>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+        </div>
+    </div>
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuModal = document.getElementById("menuModal");
+
+        menuButton.addEventListener("click", function (event) {
+            menuModal.classList.toggle("show");
+            event.stopPropagation();
+        });
+
+        menuModal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", function () {
+            menuModal.classList.remove("show");
+        });
+
+        //botones filtros
+        const filterButton = document.getElementById("filtroButton");
+        const filterButtons = document.querySelector(".filter-buttons");
+
+        filterButton.addEventListener("click", function () {
+            filterButtons.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

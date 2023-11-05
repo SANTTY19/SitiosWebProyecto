@@ -1,0 +1,275 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    padding: 20px;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente fuera de la pantalla hacia la izquierda */
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(173, 216, 230, 0);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: left 0.5s ease, opacity 0.5s ease; /* Transiciones para la posición y la opacidad */
+}
+
+.menu-modal.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(173, 216, 230, 0.9);
+    /* Color azul celeste transparente */
+    z-index: 2;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Animación para el cierre del modal de derecha a izquierda */
+@keyframes slideOut {
+    from {
+        left: 0;
+    }
+    to {
+        left: -300px; /* Desplazar el modal hacia la izquierda */
+        opacity: 0;
+    }
+}
+
+.menu-modal.hide {
+    animation: slideOut 0.5s ease; /* Aplicar la animación al cerrar el modal */
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-button img {
+    width: 60px;
+    height: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.search-container {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buscar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+}
+
+.buscar input {
+    width: 0;
+    height: 35px;
+    border-radius: 50px;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.6s ease;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #5791b8;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buscar:hover input {
+    width: 360px;
+}
+
+.buscar input:focus {
+    width: 360px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #fbfdf2;
+}
+
+.topnav a {
+    background-color: #fbfdf2;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.filter-navbar {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    width: 100%; /* Establecer el ancho al 100% */
+    position: relative; /* Asegurar que sea posicionado de forma relativa */
+    top: -10px; /* Ajustar según el espacio entre los navbars */
+}
+
+.filter-button {
+    background-color: #5791b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #45678f;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-links a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-links a:hover {
+    color: #ff5733; /* Cambia el color al pasar el mouse sobre los enlaces */
+}
+
+.filter-navbar {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+}
+
+.filter-button-container {
+    margin-bottom: 10px; /* Espaciado entre el botón "Filtros" y los botones de filtro */
+}
+
+.filter-button {
+    background-color: #5791b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons {
+    display: none;
+    gap: 10px;
+}
+
+.filter-option {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-option img {
+    width: 50px;
+    height: 50px;
+}
+
+.filter-buttons.active {
+    display: flex;
+}
